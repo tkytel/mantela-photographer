@@ -23,6 +23,15 @@
   border: 1px solid #ccc;
 }
 
+#gallery video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* オプション: サイズ不定でも整列させやすくする */
+  object-fit: contain; /* 中身が潰れずに収まるように */
+  background-color: #f0f0f0; /* 読み込み待ちも視認しやすく */
+  border: 1px solid #ccc;
+}
+
 #gallery figure {
   max-width: 800px;
   margin: 1rem auto;

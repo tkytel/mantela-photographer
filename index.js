@@ -54,18 +54,29 @@ formMantela.addEventListener('submit', async e => {
 		const wrapper = document.createElement("figure");
 		wrapper.style.margin = "1rem 0";
 
-		const obj = document.createElement("object");
-		obj.data = encodeURI(x[0]);	// XXX: もとの URI がマトモかわからない
-		obj.loading = "lazy";
-		obj.style.width = "100%";
-
+		if (x[0].endsWith(".mp4")) {
+			const video = document.createElement("video");
+			video.src = x[0];
+			video.volume = 0;
+			video.controls = true;
+			video.autoplay = true;
+			video.loading = "lazy";
+			video.style.width = "100%";
+			wrapper.appendChild(video);
+		} else {
+			const obj = document.createElement("object");
+			obj.data = x[0];
+			obj.loading = "lazy";
+			obj.style.width = "100%";
+			wrapper.appendChild(obj);
+		}
+		
 		const caption = document.createElement("figcaption");
 		caption.textContent = x[1];
 		caption.style.fontSize = "0.9rem";
 		caption.style.marginTop = "0.5rem";
-
-		wrapper.appendChild(obj);
 		wrapper.appendChild(caption);
+		
 		gallery.appendChild(wrapper);
 	});
 });
