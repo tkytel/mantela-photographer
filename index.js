@@ -135,9 +135,9 @@ formMantela.addEventListener('submit', async e => {
 			});
 
 			wrapper.appendChild(objWrapper);
-			wrapper.appendChild(caption);
 		}
 
+		wrapper.appendChild(caption);
 		gallery.appendChild(wrapper);
 	});
 });
