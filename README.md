@@ -1,3 +1,3 @@
 # Mantela Photographer
 
-Telephone Network Mandala Photographer
+Display Photo Gallery from Telephone Network Mandala data
