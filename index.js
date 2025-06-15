@@ -14,52 +14,51 @@ formMantela.addEventListener('submit', async e => {
 	outputStatus.textContent = `Done. (${stop - start} ms)`;
 	btnGenerate.disabled = false;
 
-	const media = []
-	const seen = new Set()
+	const media = [];
+	const seen = new Set();
 
-	mantelas.forEach((v, _) => {
-		v.extensions.map((x) => {
+	mantelas.forEach(v => {
+		v.extensions.map(x => {
 			if (!('image' in x)) {
-				return
+				return;
 			}
 
 			if (!seen.has(x.image)) {
-				desc = x.name + ', ' + x.extension + ' on '
-				desc += v.aboutMe.name + ' '
-				desc += '(' + v.aboutMe.identifier + ')'
-				desc.replace(/\n|\\n/g, ' ')
+				desc = x.name + ', ' + x.extension + ' on ';
+				desc += v.aboutMe.name + ' ';
+				desc += '(' + v.aboutMe.identifier + ')';
 
-				seen.add(x.image)
+				seen.add(x.image);
 				media.push([
 					x.image,
 					desc,
-				])
+				]);
 			}
-		})
+		});
 
 		if ('image' in v.aboutMe) {
-			desc = v.aboutMe.name + ' '
-			desc += '(' + v.aboutMe.identifier + ')'
-			desc.replace(/\n|\\n/g, ' ')
+			desc = v.aboutMe.name + ' ';
+			desc += '(' + v.aboutMe.identifier + ')';
 
-			seen.add(v.aboutMe.image)
+			seen.add(v.aboutMe.image);
 			media.push([
 				v.aboutMe.image,
 				desc,
-			])
+			]);
 		}
 	});
 
 	const gallery = document.getElementById("gallery");
-	media.map((x) => {
+
+	media.map(x => {
 		const wrapper = document.createElement("figure");
 		wrapper.style.margin = "1rem 0";
 
 		const obj = document.createElement("object");
-		obj.data = x[0];
+		obj.data = encodeURI(x[0]);	// XXX: もとの URI がマトモかわからない
 		obj.loading = "lazy";
 		obj.style.width = "100%";
-		
+
 		const caption = document.createElement("figcaption");
 		caption.textContent = x[1];
 		caption.style.fontSize = "0.9rem";
@@ -68,7 +67,7 @@ formMantela.addEventListener('submit', async e => {
 		wrapper.appendChild(obj);
 		wrapper.appendChild(caption);
 		gallery.appendChild(wrapper);
-	}); 
+	});
 });
 
 /*
