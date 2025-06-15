@@ -21,6 +21,13 @@
 <p>Mantela 上に表現されたメディアを収集して表示します</p>
 </header>
 <main>
+<figure id="modal" style="display: none;">
+<button id="modalClose">&times;</button>
+<div id="modalImageWrapper" style="position: relative">
+<object id="modalImage" data="" type="image/*"></object>
+<figcaption id="modalCaption"></figcaption>
+</div>
+</figure>
 <form id="formMantela">
 <fieldset>
 <legend>初期設定</legend>
@@ -47,10 +54,10 @@
 </form>
 <section>
 <h3>取得結果</h3>
-</section>
-</main>
 <div id="wrapper">
 <div id="gallery"></div>
 </div>
+</section>
+</main>
 </body>
 </html>
