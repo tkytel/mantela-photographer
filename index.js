@@ -49,6 +49,7 @@ formMantela.addEventListener('submit', async e => {
 	});
 
 	const gallery = document.getElementById("gallery");
+	gallery.innerHTML = "";
 
 	const isVideo = (url) => /\.mp4$/i.test(url);
 
