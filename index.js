@@ -50,12 +50,12 @@ formMantela.addEventListener('submit', async e => {
 
 	const gallery = document.getElementById("gallery");
 
-	media.map((x) => {
+	media.map(x => {
 		const wrapper = document.createElement("figure");
 		wrapper.style.margin = "1rem 0";
 
 		const obj = document.createElement("object");
-		obj.data = encodeURI(x[0]);
+		obj.data = encodeURI(x[0]);	// XXX: もとの URI がマトモかわからない
 		obj.loading = "lazy";
 		obj.style.width = "100%";
 
