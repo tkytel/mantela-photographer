@@ -47,9 +47,8 @@ formMantela.addEventListener('submit', async e => {
         const obj = document.createElement("object");
         obj.data = x[0];
         obj.loading = "lazy";
-        obj.type = "text/html";
         obj.style.width = "100%";
-
+        
         const caption = document.createElement("figcaption");
         caption.textContent = x[1];
         caption.style.fontSize = "0.9rem";
