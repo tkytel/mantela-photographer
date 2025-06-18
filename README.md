@@ -1,3 +1,3 @@
-# Mantela Photographer - Photo Gallery of the Terminal Connected to Telephone Network
+# Mantela Photographer - Telephone Network Mandala Photographer
 
-**Mantela Photographer** Displays Photo Gallery from **[Mantela](https://github.com/tkytel/mantela)** data.
+**Mantela Photographer** は、 **[Mantela](https://github.com/tkytel/mantela)** 上に表現されたメディアを収集して表示します。
