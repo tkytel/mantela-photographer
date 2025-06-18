@@ -1,3 +1,3 @@
-# Mantela Photographer
+# Mantela Photographer - Photo Gallery of the Terminal Connected to Telephone Network
 
-Display Photo Gallery from Telephone Network Mandala data
+`Mantela Photographer` Displays Photo Gallery from Telephone Network Mandala data.
