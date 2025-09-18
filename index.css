@@ -19,8 +19,8 @@
 	height: auto;
 	aspect-ratio: 4 / 3; /* オプション: サイズ不定でも整列させやすくする */
 	object-fit: contain; /* 中身が潰れずに収まるように */
-	background-color: #f0f0f0; /* 読み込み待ちも視認しやすく */
-	border: 1px solid #ccc;
+	background-color: var(--backgroud-alt); /* 読み込み待ちも視認しやすく */
+	border: 1px solid var(--border);
 }
 
 #gallery video {
@@ -28,8 +28,8 @@
 	height: auto;
 	aspect-ratio: 4 / 3;
 	object-fit: contain;
-	background-color: #f0f0f0;
-	border: 1px solid #ccc;
+	background-color: var(--background-alt);
+	border: 1px solid var(--border);
 }
 
 #gallery figure {
@@ -39,7 +39,7 @@
 
 #gallery figcaption {
 	font-style: italic;
-	color: #555;
+	color: var(--text-muted);
 }
 
 #modal {
@@ -63,7 +63,7 @@
 
 #modalCaption {
 	font-size: 0.9rem;
-	background-color: white;
+	background-color: var(--background);
 	padding: 5px;
 	margin-top: -8px;
 }
