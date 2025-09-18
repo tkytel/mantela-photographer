@@ -84,8 +84,8 @@ formMantela.addEventListener('submit', async e => {
 				modalObj.src = obj.data;
 				modalObj.style.Width = "100%";
 				modalObj.style.maxHeight = "60vh";
-				modalObj.style.border = "4px solid white";
-				modalObj.style.backgroundColor = "#fff";
+				modalObj.style.border = "4px solid var(--border)";
+				modalObj.style.backgroundColor = "var(--background)";
 				modalObj.style.objectFit = "contain";
 				modalObj.controls = true;
 				modalObj.video = 0;
@@ -121,8 +121,8 @@ formMantela.addEventListener('submit', async e => {
 				modalObj.data = obj.data;
 				modalObj.style.Width = "100%";
 				modalObj.style.maxHeight = "60vh";
-				modalObj.style.border = "4px solid white";
-				modalObj.style.backgroundColor = "#fff";
+				modalObj.style.border = "4px solid var(--border)";
+				modalObj.style.backgroundColor = "var(--background)";
 				modalObj.style.objectFit = "contain";
 				modalObj.setAttribute("loading", "lazy");
 
